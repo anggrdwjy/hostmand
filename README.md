@@ -6,7 +6,7 @@ Built for Bastion / Jump Server workflows and Red Hat-style labs, where you acce
 
 **`hostmand` survives server reboot.** The binary lives in `/usr/local/bin`, data lives in a permanent CSV file, and a systemd service re-generates your SSH config automatically on every boot.
 
-**v2 adds:** automatic backup, bulk add from text file, custom SSH port per host (hidden from list), and sync across bastion / workstation.
+Automatic backup, bulk add from text file, custom SSH port per host (hidden from list), and sync across bastion / workstation.
 
 Instead of typing this every time:
 
