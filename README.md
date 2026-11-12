@@ -1,4 +1,4 @@
-## hostmand - Hostname Manager 
+## hostmand - Hostname Manager for JumpServer or Bash Terminal Server
 
 A simple Bash CLI tool + daemon to save, manage, and connect to all your server hostnames.
 
