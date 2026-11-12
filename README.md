@@ -151,8 +151,6 @@ Host node1
 
 Your old `~/.ssh/config` is backed up to `~/.ssh/config.bak`.
 
----
-
 ## All Commands
 
 | Command | Description |
@@ -176,8 +174,6 @@ Your old `~/.ssh/config` is backed up to `~/.ssh/config.bak`.
 | `hostmand daemon` | Run daemon manually (check + regenerate SSH config) |
 | `hostmand clear` | Delete ALL hosts (auto-backup first) |
 | `hostmand help` | Show help menu |
-
----
 
 #### Run in Daemon
 
