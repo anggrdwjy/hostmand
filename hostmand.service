@@ -1,0 +1,18 @@
+[Unit]
+Description=hostmand
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/hostmand daemon
+ExecStartPost=/bin/bash -c 'echo "[hostmand] started at $(date)" >> /var/log/hostmand.log'
+ExecReload=/usr/local/bin/hostmand daemon
+StandardOutput=journal
+StandardError=journal
+# Run as root so it can ensure directories for all users, but data stays in each user's HOME
+# For single-user lab, this is fine. For multi-user, change User= to your username.
+
+[Install]
+WantedBy=multi-user.target
