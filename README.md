@@ -342,8 +342,6 @@ hostmand add-bulk hosts.txt
 
 Duplicates are skipped, auto-backup created before bulk add.
 
----
-
 #### Custom SSH Port Per Host
 
 Each host can have its own SSH port.
@@ -359,8 +357,6 @@ hostmand add db1 10.0.0.20 root "DB server" bastion 2222
 - `hostmand export-ssh` generates `Port 2222` in `~/.ssh/config`
 
 If you omit port, it defaults to `22`.
-
----
 
 #### Sync
 
