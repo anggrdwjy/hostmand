@@ -265,8 +265,6 @@ CLI `hostmand` will still work, but SSH config will not auto-regenerate on boot.
 
 So after reboot, `ssh node1` works immediately without manual export.
 
----
-
 ## Data Format
 
 All data is stored in:
@@ -288,8 +286,6 @@ web1,192.168.1.50,ubuntu,Web server,-,2222
 ```
 
 If you have an old v1 file with 5 columns (`name,ip,user,description,bastion`), `hostmand` auto-migrates it on first run by adding `,22` to each line. No manual migration needed.
-
----
 
 #### Automatic Backup
 
@@ -325,8 +321,6 @@ hostmand backup restore hosts-20261113-143000-before-del-node1.csv
 ```
 
 This will backup current file first, copy backup to `hosts.csv`, show `hostmand list`.
-
----
 
 #### Bulk Add
 
@@ -381,8 +375,6 @@ Flow for push:
 2. `scp` local `hosts.csv` to target via ProxyJump + port
 3. On target, run `hostmand daemon` to regenerate its SSH config
 
----
-
 ## How Persistence Works After Reboot
 
 #### Binary in `/usr/local/bin`
@@ -418,8 +410,6 @@ ExecStartPost=/bin/bash -c 'echo "[hostmand] started at $(date)" >> /var/log/hos
 WantedBy=multi-user.target
 ```
 
----
-
 #### Reboot Test
 
 ```bash
@@ -451,8 +441,6 @@ IP ADDRESS           HOSTNAME
 Total: 1 host
 ```
 
----
-
 #### Bastion Workflow Example
 
 ```
@@ -475,8 +463,6 @@ hostmand sync workstation
 hostmand daemon
 systemctl status hostmand
 ```
-
----
 
 ## Troubleshooting
 
